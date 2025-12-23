@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #ecedef;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.dropdown-header {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-header #selectedDate {
+  font-size: 14px;
+  font-weight: 600;
+}
+.arrow {
+  font-size: 14px;
+  color: #2563eb;
+}
+
+.dropdown-list {
+  display: none;
+  margin-top: 8px;
+}
+
+.dropdown-list.open {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dropdown-item:hover {
+  background: #f9fafb;
+}
+
+#strategyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.strategy {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.strategy span {
+  font-size: 14px;
+  font-weight: 600;
+}
+.strategy span.count {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+  color: #6b7280;
+}
+
+.empty-state p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.empty-state strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width : 576px) {
+  .container {
+    padding: 20px;
+  }
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 6px;
+  }
+  .strategy {
+    flex-wrap: wrap;
+  }
+} 

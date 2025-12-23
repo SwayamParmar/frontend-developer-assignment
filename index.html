@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nerve Solutions Assignment</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active">Bullish</button>
+        <button class="tab">Bearish</button>
+        <button class="tab">Rangebound</button>
+        <button class="tab">Volatile</button>
+      </div>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <div class="dropdown-header" id="dropdownToggle">
+          <span id="selectedDate"></span>
+          <span class="arrow">&#9660;</span>
+        </div>
+        <div class="dropdown-list" id="dropdownList"></div>
+      </div>
+
+      <!-- Strategy Cards -->
+      <div id="strategyContainer"></div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state hidden">
+        <p>There are no strategies for</p>
+        <strong id="emptyDate"></strong>
+      </div>
+    </div>
+
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
